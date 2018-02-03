@@ -11,7 +11,7 @@ import zipfile
 import click
 from tqdm import tqdm
 
-from mooquant import history
+from mooquant_history import history
 
 
 @click.group()
@@ -21,7 +21,7 @@ def cli(ctx, verbose):
     ctx.obj["VERBOSE"] = verbose
 
 
-@cli.command(help='金融产品的历史数据下载.')
+@cli.command(help='A股的历史数据下载(sina源).')
 @click.option('-d', '--directory', default=os.path.expanduser("~/.mooquant/bundle"), type=click.Path(file_okay=False), help='历史数据下载目录, 默认 ~/.mooquant/bundle.')
 @click.option('-i', '--initial', is_flag=True, help='初始化历史, 第一次下载使用该参数, 默认 False.')
 @click.option('-s', '--symbol', default=None, help='更新单个股票的代码, 默认为空.')
@@ -31,22 +31,21 @@ def cli(ctx, verbose):
 def bundle(directory, initial, symbol, append, delay, thread):
     history.bundle(dtype='day', export='csv', **locals()) 
 
+@cli.command(help='更新股票代码.')
+@click.option('-d', '--directory', default=os.path.expanduser("~/.mooquant/bundle"), type=click.Path(file_okay=False), help='历史数据下载目录.')
+def symbol(directory):
+    from mooquant_history.helpers.symbol import update_stock_codes
+    update_stock_codes()
 
-# @cli.command(help='更新股票代码.')
-# @click.option('-d', '--directory', default=os.path.expanduser("~/.mooquant/bundle"), type=click.Path(file_okay=False), help='历史数据下载目录.')
-# def symbol(directory):
-#     from mooquant.helpers.symbol import update_stock_codes
-#     update_stock_codes()
-
-# @cli.command(help='实时行情.')
-# @click.option('-s', '--symbol', default=None, help='单个股票的代码行情.')
-# def quote(symbol):
-#     click.echo('运行实时行情')
+@cli.command(help='实时行情(支持sina, qq, ).')
+@click.option('-s', '--symbol', default=None, help='单个股票的代码行情.')
+def quotes(symbol):
+    click.echo('运行实时行情')
 
 
 @cli.command(help='导出 bundle.')
 @click.option('-d', '--directory', default=os.path.expanduser("~/.mooquant/bundle"), type=click.Path(file_okay=False), help='历史数据下载目录.')
-@click.option('-o', '--output', default=os.path.expanduser("."), type=click.Path(file_okay=False), help='导出文件目录, 默认当前目录.')
+@click.option('-o', '--output', default=os.path.expanduser("./bundle"), type=click.Path(file_okay=False), help='导出文件目录, 默认当前目录.')
 def export(directory, output):
     data_path = os.path.join(directory, 'day', 'raw_data')
     file_name = os.path.join(output,'bundle.zip')
@@ -63,10 +62,10 @@ def export(directory, output):
     click.echo('done.')
 
 
-# @cli.command(help='运行回测规则.')
-# @click.option('-s', '--strategy', default='', help='运行回测规则路径.')
-# def execute(strategy):
-#     click.echo('运行回测规则')
+@cli.command(help='转换为 MooQaunt 格式.')
+@click.option('-s', '--strategy', default='', help='运行回测规则路径.')
+def covert(strategy):
+    click.echo('运行回测规则')
 
 def main():
     cli(obj={})

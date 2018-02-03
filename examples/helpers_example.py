@@ -1,4 +1,4 @@
-from mooquant.helpers import *
+from mooquant_history.helpers import *
 
 print(is_holiday_today())
 print(is_holiday('2016-12-12'))
