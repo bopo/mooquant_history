@@ -5,7 +5,7 @@ Credits
 Development Lead
 ----------------
 
-* mooquant_sina <ibopo@126.com>
+* mooquant_history <ibopo@126.com>
 
 Contributors
 ------------

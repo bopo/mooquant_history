@@ -29,28 +29,28 @@ test_requirements = [
     'pytest',
 ]
 
-from mooquant_sina import __version__
+from mooquant_history import __version__
 
 setup(
-    name='mooquant_sina',
+    name='mooquant_history',
     version=__version__,
     description="",
     long_description=readme + '\n\n' + history,
     author="bopowang",
     author_email='ibopo@126.com',
-    url='https://github.com/bopo/mooquant_sina',
-    packages=find_packages(include=['mooquant_sina', 'mooquant_sina.*']),
+    url='https://github.com/bopo/mooquant_history',
+    packages=find_packages(include=['mooquant_history', 'mooquant_history.*']),
     entry_points={
         'console_scripts': [
-            'mooquant_sina=mooquant_sina.cli:main',
-            'mq=mooquant_sina.cli:main',
+            'mooquant_history=mooquant_history.cli:main',
+            'mqh=mooquant_history.cli:main',
         ]
     },
     include_package_data=True,
     install_requires=requirements,
     license="MIT license",
     zip_safe=False,
-    keywords='mooquant_sina',
+    keywords='mooquant_history',
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',

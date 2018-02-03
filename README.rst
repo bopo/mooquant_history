@@ -9,7 +9,7 @@ MooQuant
 .. image:: https://img.shields.io/travis/bopo/MooQuant.svg
         :target: https://travis-ci.org/bopo/MooQuant
 
-.. image:: https://readthedocs.org/projects/mooquant_sina/badge/?version=latest
+.. image:: https://readthedocs.org/projects/mooquant_history/badge/?version=latest
         :target: https://MooQuant.readthedocs.io/zh_CN/latest/?badge=latest
         :alt: Documentation Status
 
