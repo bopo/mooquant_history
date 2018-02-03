@@ -1,0 +1,127 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "ebb276306e2e46bd96bf0a14be41a10b2f4b32e0d6784826fcdd335246f3c035"
+        },
+        "host-environment-markers": {
+            "implementation_name": "cpython",
+            "implementation_version": "3.6.4",
+            "os_name": "posix",
+            "platform_machine": "x86_64",
+            "platform_python_implementation": "CPython",
+            "platform_release": "17.3.0",
+            "platform_system": "Darwin",
+            "platform_version": "Darwin Kernel Version 17.3.0: Thu Nov  9 18:09:22 PST 2017; root:xnu-4570.31.3~1/RELEASE_X86_64",
+            "python_full_version": "3.6.4",
+            "python_version": "3.6",
+            "sys_platform": "darwin"
+        },
+        "pipfile-spec": 6,
+        "requires": {
+            "python_version": "3.6"
+        },
+        "sources": [
+            {
+                "name": "pypi",
+                "url": "http://mirrors.aliyun.com/pypi/simple/",
+                "verify_ssl": false
+            }
+        ]
+    },
+    "default": {
+        "certifi": {
+            "hashes": [],
+            "version": "==2017.11.5"
+        },
+        "chardet": {
+            "hashes": [],
+            "version": "==3.0.4"
+        },
+        "cssselect": {
+            "hashes": [],
+            "version": "==1.0.1"
+        },
+        "fastcache": {
+            "hashes": [],
+            "version": "==1.0.2"
+        },
+        "idna": {
+            "hashes": [],
+            "version": "==2.6"
+        },
+        "lxml": {
+            "hashes": [],
+            "version": "==4.1.1"
+        },
+        "numpy": {
+            "hashes": [],
+            "version": "==1.13.3"
+        },
+        "pandas": {
+            "hashes": [],
+            "version": "==0.21.1"
+        },
+        "pyquery": {
+            "hashes": [],
+            "version": "==1.3.0"
+        },
+        "python-dateutil": {
+            "hashes": [],
+            "version": "==2.6.1"
+        },
+        "pytz": {
+            "hashes": [],
+            "version": "==2017.3"
+        },
+        "requests": {
+            "hashes": [],
+            "version": "==2.18.4"
+        },
+        "six": {
+            "hashes": [],
+            "version": "==1.11.0"
+        },
+        "tqdm": {
+            "hashes": [],
+            "version": "==4.19.5"
+        },
+        "urllib3": {
+            "hashes": [],
+            "version": "==1.22"
+        }
+    },
+    "develop": {
+        "attrs": {
+            "hashes": [],
+            "version": "==17.3.0"
+        },
+        "ddt": {
+            "hashes": [],
+            "version": "==1.1.1"
+        },
+        "mock": {
+            "hashes": [],
+            "version": "==2.0.0"
+        },
+        "pbr": {
+            "hashes": [],
+            "version": "==3.1.1"
+        },
+        "pluggy": {
+            "hashes": [],
+            "version": "==0.6.0"
+        },
+        "py": {
+            "hashes": [],
+            "version": "==1.5.2"
+        },
+        "pytest": {
+            "hashes": [],
+            "version": "==3.3.1"
+        },
+        "six": {
+            "hashes": [],
+            "version": "==1.11.0"
+        }
+    }
+}

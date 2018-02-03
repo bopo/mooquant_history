@@ -1,0 +1,26 @@
+[[source]]
+
+url = "http://mirrors.aliyun.com/pypi/simple/"
+verify_ssl = false
+name = "pypi"
+
+
+[packages]
+
+fastcache = "*"
+requests = "*"
+pyquery = "*"
+pandas = "*"
+tqdm = "*"
+
+
+[dev-packages]
+
+pytest = "*"
+mock = "*"
+ddt = "*"
+
+
+[requires]
+
+python_version = "3.6"
